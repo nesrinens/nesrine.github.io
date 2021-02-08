@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	  <charset="UTF-8">
+	  <meta charset="UTF-8">
     <style>
     h1{
       background-color:rgb(247,191,190);
@@ -50,7 +50,7 @@
 <div  class="container">
 	  <h1>TP Météo HTML</h1>
 		<h2>Choose a city</h2>
-		<select class="city" onchange=showCity()>
+		<select id="menu" onchange=showCity()>
 			<option>--city osptions here--</option>
 <option value ="new_york">New York</option>
 <option value ="islande">Islande</option>
@@ -59,8 +59,18 @@
 		<script>
 
 function showCity() {
-	let cities = document.getElementsByClassName("city").value;
-console.log( cities);}
+
+
+let nomVilleSelectionnee = document.getElementById(menu).value;
+let cities = document.getElementsByClassName("city");
+console.log(nomVilleSelectionnee);
+for (i=0; i<3; i++) {
+if (cities[i].id == nomVilleSelectionnee) {
+ element.style.display= "none";
+} else {
+ element.style.display= "";
+}
+}}
 		</script>
 <div class= "city_container">
     <div id="new_york" class="city" >
