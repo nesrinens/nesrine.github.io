@@ -6,8 +6,11 @@
     h1{
       background-color:rgb(247,191,190);
       text-align:center;
+				margin:5px;
+
+				border-radius: 10%;
     }
-    #new_york,#montenegro,#islande{
+    #new_york,#montenegro,#islande,#sousse{
       background-color:rgb(255,204,203);
       text-align:center;
 			margin:5px;
@@ -18,16 +21,22 @@
         flex-wrap:wrap;
         flex-direction: row;
         align-content:stretch;
+
     }
     .container{
             display: flex;
             flex-direction: column;
-              justify-content:center;
-              width:300px;
-                align-content:stretch;
+            justify-content:center;
+
+          align-content:stretch;
+					background-color:rgb(253,185,200);
+
+
+
     }
     .city_container div{
-          border: dotted 1px black;
+
+					border-radius: 5%;
     }
     .city_container div:nth-child(1){
       flex-grow:1;
@@ -38,23 +47,34 @@
     .city_container div:nth-child(3){
       flex-grow:1;
     }
+		.city_container div:nth-child(4){
+      flex-grow:1;}
+
     .footer{
         background-color:rgb(253,188,180);
-
+					margin:5px;
+					  text-align:center;
     }
+		.menu,.label{text-align:center;}
+		.label{
+			font-weight:bold;
+		}
+		#choice{
+	background-color:gb(253,188,180);}
     </style>
 
 	</head>
 	<body >
 <div  class="container">
 	  <h1>TP Météo HTML</h1>
-		<label>Choose a city</label>
+		<label class="label">Choose a city</label>
 		<div class="menu">
 		<select id="choice" name="cities" onchange=showCity()>
 	<option value="">--Please choose a city--</option>
  <option value ="new_york">New York</option>
  <option value ="islande">Islande</option>
  <option value ="montenegro">Monténégro</option>
+ <option value ="sousse">Sousse</option>
 		</select>
 	</div>
 <div class= "city_container">
@@ -62,21 +82,27 @@
      <h2>New York</h2>
 <p> Température -6°<br>
         Temps clair<br>
-        <img src="C:\Users\33699\Downloads\Clear.PNG" alt="this is a picture of a rain cloud" width ="100"></p>
+        <img src="Clear.PNG" alt="this is a picture of a rain cloud" width ="100"></p>
         </div>
 
         <div id="islande" class="city">
      <h2>Islande</h2>
 <p>  Température  2°<br>
 Temps clair<br>
-<img src="C:\Users\33699\Downloads\Clear.PNG" alt="this is a picture of a rain cloud" width ="100"></p>
+<img src="Clear.PNG" alt="this is a picture of a rain cloud" width ="100"></p>
  </div>
- <div id="montenegro"class="city" class="city">
+ <div id="montenegro"class="city" >
      <h2>Monténégro</h2>
      <p> Température  12° <br>
      Temps pluie<br>
-   <img src="C:\Users\33699\Downloads\Rain.PNG" alt="this is a picture of a rain cloud" width ="100"></p>
+   <img src="Rain.PNG" alt="this is a picture of a rain cloud" width ="100"></p>
    </div>
+	 <div id="sousse"class="city">
+	     <h2>Sousse</h2>
+	     <p> Température  21° <br>
+	    Ensoleillé<br>
+	   <img src="Sunny.PNG" alt="this is a picture of a rain cloud" width ="100"></p>
+	   </div>
 </div>
 <script>
 function showCity(){
@@ -102,7 +128,7 @@ function showCity(){
 }
 </script>
 
-   <p class="footer">Page creator: Nesrine BENSASSI---Image credit: Clear weather:bright by Adi Kurniawan from the Noun Project, Rain: Weather rain by Icons Bazaar from the Noun Project from <a href="https://thenounproject.com/">Noun Project</a></p>
+   <p class="footer">Page creator: Nesrine BENSASSI---Image credit: <a href="https://thenounproject.com/">Noun Project</a></p>
 </div>
 	</body>
 </html
