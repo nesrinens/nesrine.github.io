@@ -1,67 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script src="script.js"></script>
+		  <link rel="stylesheet" href="style.css">
 	  <meta charset="UTF-8">
-    <style>
-    h1{
-      background-color:rgb(247,191,190);
-      text-align:center;
-				margin:5px;
-
-				border-radius: 10%;
-    }
-    #new_york,#montenegro,#islande,#sousse{
-      background-color:rgb(255,204,203);
-      text-align:center;
-			margin:5px;
-    }
-    .city_container{
-       display: flex;
-        justify-content:space-arround;
-        flex-wrap:wrap;
-        flex-direction: row;
-        align-content:stretch;
-
-    }
-    .container{
-            display: flex;
-            flex-direction: column;
-            justify-content:center;
-
-          align-content:stretch;
-					background-color:rgb(253,185,200);
-
-
-
-    }
-    .city_container div{
-
-					border-radius: 5%;
-    }
-    .city_container div:nth-child(1){
-      flex-grow:1;
-    }
-    .city_container div:nth-child(2){
-      flex-grow:1;
-    }
-    .city_container div:nth-child(3){
-      flex-grow:1;
-    }
-		.city_container div:nth-child(4){
-      flex-grow:1;}
-
-    .footer{
-        background-color:rgb(253,188,180);
-					margin:5px;
-					  text-align:center;
-    }
-		.menu,.label{text-align:center;}
-		.label{
-			font-weight:bold;
-		}
-		#choice{
-	background-color:gb(253,188,180);}
-    </style>
 
 	</head>
 	<body >
@@ -104,29 +46,7 @@ Temps clair<br>
 	   <img src="Sunny.PNG" alt="this is a picture of a rain cloud" width ="100"></p>
 	   </div>
 </div>
-<script>
-function showCity(){
-		let villeCourante = document.getElementById("choice").value;
-		let cities = document.getElementsByClassName("city");
-		for(i=0;i<cities.length;i++){
-				let show = document.getElementById(cities[i].id);
 
-		if(villeCourante == " "){
-				show.style.display="";
-
-		}
-		else if(villeCourante == cities[i].id){
-				show.style.display="";
-
-		}
-		 else{
-				show.style.display="none";
-
-		}
-}
-
-}
-</script>
 
    <p class="footer">Page creator: Nesrine BENSASSI---Image credit: <a href="https://thenounproject.com/">Noun Project</a></p>
 </div>
