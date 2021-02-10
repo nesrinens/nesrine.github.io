@@ -42,36 +42,21 @@
         background-color:rgb(253,188,180);
 
     }
-
     </style>
 
 	</head>
 	<body >
 <div  class="container">
 	  <h1>TP Météo HTML</h1>
-		<h2>Choose a city</h2>
-		<select id="menu" onchange=showCity()>
-			<option>--city osptions here--</option>
-<option value ="new_york">New York</option>
-<option value ="islande">Islande</option>
-<option value ="montenegro">Monténégro</option>
+		<label>Choose a city</label>
+		<div class="menu">
+		<select id="choice" name="cities" onchange=showCity()>
+	<option value="">--Please choose a city--</option>
+ <option value ="new_york">New York</option>
+ <option value ="islande">Islande</option>
+ <option value ="montenegro">Monténégro</option>
 		</select>
-		<script>
-
-function showCity() {
-
-
-let nomVilleSelectionnee = document.getElementById(menu).value;
-let cities = document.getElementsByClassName("city");
-console.log(nomVilleSelectionnee);
-for (i=0; i<3; i++) {
-if (cities[i].id == nomVilleSelectionnee) {
- element.style.display= "none";
-} else {
- element.style.display= "";
-}
-}}
-		</script>
+	</div>
 <div class= "city_container">
     <div id="new_york" class="city" >
      <h2>New York</h2>
@@ -93,6 +78,29 @@ Temps clair<br>
    <img src="C:\Users\33699\Downloads\Rain.PNG" alt="this is a picture of a rain cloud" width ="100"></p>
    </div>
 </div>
+<script>
+function showCity(){
+		let villeCourante = document.getElementById("choice").value;
+		let cities = document.getElementsByClassName("city");
+		for(i=0;i<cities.length;i++){
+				let show = document.getElementById(cities[i].id);
+
+		if(villeCourante == " "){
+				show.style.display="";
+
+		}
+		else if(villeCourante == cities[i].id){
+				show.style.display="";
+
+		}
+		 else{
+				show.style.display="none";
+
+		}
+}
+
+}
+</script>
 
    <p class="footer">Page creator: Nesrine BENSASSI---Image credit: Clear weather:bright by Adi Kurniawan from the Noun Project, Rain: Weather rain by Icons Bazaar from the Noun Project from <a href="https://thenounproject.com/">Noun Project</a></p>
 </div>
